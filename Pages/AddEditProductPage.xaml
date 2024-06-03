@@ -1,0 +1,71 @@
+﻿<Page x:Class="AutozaphastiKulckov.Pages.AddEditProductPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AutozaphastiKulckov.Pages" xmlns:sys="clr-namespace:System;assembly=mscorlib"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddEditProductPage">
+    <Page.Resources>
+        <sys:String x:Key="defaultImage">
+            pack://application:,,,/Resources/picture.png
+        </sys:String>
+    </Page.Resources>
+    <ScrollViewer>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="1">
+                <TextBlock Text="Артикул:"/>
+                <TextBox Name="txtArticle" Text="{Binding articul}"/>
+
+                <TextBlock Text="Наименование: "/>
+                <TextBox Name="txtTitle" Text="{Binding name}"/>
+
+                <TextBlock Text="Категория: "/>
+                <ComboBox Name="cmbCategory" SelectedItem="{Binding IdCategory}"/>
+
+                <TextBlock Text="Количество на складе: "/>
+                <TextBox Name="txtcountinstock" Text="{Binding Count_warehouse}"/>
+
+                <TextBlock Text="Единиица измерения: "/>
+                <TextBox Name="txtunit" Text="{Binding unit}"/>
+
+                <TextBlock Text="Поставщик: "/>
+                <TextBox Name="txtsupplier" Text="{Binding IdSupliener}"/>
+
+                <TextBlock Text="Размер максимальной скидки: "/>
+                <TextBox Name="txtmaxdiscount" Text="{Binding max_discount}"/>
+
+                <TextBlock Text="Размер действующей скидки: "/>
+                <TextBox Name="txtdiscount" Text="{Binding CurrentDiscount}"/>
+
+                <TextBlock Text="Стоимость за единицу: "/>
+                <TextBox Name="txtcost" Text="{Binding cost}"/>
+
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel>
+                        <Image x:Name="img" Width="100" Height="100" Source="{Binding Photo, FallbackValue={StaticResource defaultImage}}"/>
+                        <Button Name="btnenterimage" Content="Выбрать фото" Click="btnenterimage_Click"/>
+                        
+                    </StackPanel>
+
+                    <StackPanel Margin="50 0 0 0">
+                        <TextBlock Text="Описание: "/>
+                        <TextBox Name="txtDescription" Text="{Binding Description}" Height="100" Width="300" TextWrapping="Wrap"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Button Name="btndeleteproduct" Content="Удалить материал" Width="200" Visibility="Collapsed" Click="btndeleteproduct_Click"/>
+                    <Button Name="btnsaveproduct" Content="Сохранить" Width="200" Click="btnsaveproduct_click"/>
+                </StackPanel>
+            </StackPanel>
+    </Grid>
+    </ScrollViewer>
+</Page>

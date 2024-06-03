@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c1878328286a4b068fc61c5b6e382ac2" Name="Diagram1">
+        <EntityTypeShape EntityType="automarketKulckovModel.Category" Width="1.5" PointX="0.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="automarketKulckovModel.Manafacturer" Width="1.5" PointX="0.75" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="automarketKulckovModel.Order" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="automarketKulckovModel.OrderComposition" Width="1.5" PointX="5.25" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="automarketKulckovModel.OrderStatus" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="automarketKulckovModel.PickUpPoint" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="automarketKulckovModel.Product" Width="1.5" PointX="3" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="automarketKulckovModel.Role" Width="1.5" PointX="1.5" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="automarketKulckovModel.Supliener" Width="1.5" PointX="0.75" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="automarketKulckovModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="automarketKulckovModel.User" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <AssociationConnector Association="automarketKulckovModel.FK_Product_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="automarketKulckovModel.FK_Product_Manafacturer" ManuallyRouted="false" />
+        <AssociationConnector Association="automarketKulckovModel.FK_Order_OrderStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="automarketKulckovModel.FK_Order_PickUpPoint" ManuallyRouted="false" />
+        <AssociationConnector Association="automarketKulckovModel.FK_Order_PickUpPoint1" ManuallyRouted="false" />
+        <AssociationConnector Association="automarketKulckovModel.FK_Order_User" ManuallyRouted="false" />
+        <AssociationConnector Association="automarketKulckovModel.FK_OrderComposition_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="automarketKulckovModel.FK_OrderComposition_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="automarketKulckovModel.FK_Product_Supliener" ManuallyRouted="false" />
+        <AssociationConnector Association="automarketKulckovModel.FK_User_Role" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
